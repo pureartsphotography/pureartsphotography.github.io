@@ -1,0 +1,46 @@
+footer
+  background: $black
+  color: $white
+  text-align: center
+  +bs-sm
+    text-align: left
+    .footer-middle
+      text-align: center
+
+  .footer-section + .footer-section
+    padding-top: 2em
+    +bs-sm
+      padding-top: 0
+
+  .footer-navigation
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-around
+    +bs-sm
+      display: block
+
+  .social-icons
+    padding-top: 2em
+    width: 50%
+    margin: 0 auto
+
+  .footer-logo
+    margin: 0 auto
+
+  a,
+  a:visited,
+  a:active,
+  a:focus,
+  a i.fa
+    color: $white
+    text-decoration: none
+    transition: color .3s ease-in-out
+
+  a:hover,
+  a:hover i.fa
+    color: $lightbrown
+    text-decoration: none
+
+  .footer-middle
+    text-align: center

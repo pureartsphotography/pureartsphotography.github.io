@@ -1,0 +1,36 @@
+html,
+body
+    font-size: calc(0.6em + 1vw)
+    margin: 0
+    padding: 0
+    overflow-x: hidden
+    +bs-sm
+        font-size: 12px
+    +bs-md
+        font-size: 12px
+    +bs-lg
+        font-size: 16px
+
+section,
+footer
+    padding: $padding-height 0
+
+.flex-col
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.flex-row
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+
+.flex-responsive
+  display: flex
+  flex-direction: column
+  +bs-sm
+    flex-direction: row
+
+i.fa
+  color: $white
+  text-align: center
