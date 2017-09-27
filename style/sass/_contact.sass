@@ -1,0 +1,58 @@
+section.contact-page
+  background-color: $white
+
+  form
+    background:
+      color: $purple
+    border-radius: $border-radius
+    padding: 1rem
+    input, textarea
+      background-color: rgba($white, 0.8)
+      border: none
+      box-sizing: border-box
+      outline: none
+      padding: 0.5rem
+      width: 100%
+    label
+      color: $lightpurple
+
+    input.send
+      background-color: transparent
+      border: 1px solid $lightpurple
+      border-radius: 1rem
+      color: $lightpurple
+      cursor: pointer
+      font-weight: 800
+      transition: 0.3s ease all
+      padding: 1rem
+      &:hover
+        background-color: $lightpurple
+        color: $purple
+
+
+    textarea
+      height: 10rem
+      resize: none
+
+    div
+      padding: $gutter 0
+
+  .contact-info
+    padding-top: 5rem
+    +break-md
+      padding-top: 0rem
+    .fa
+      padding: 2rem
+  .social-media
+    +break-md
+      padding-top: 11rem
+    .icon
+      +font(4)
+    a
+      text-decoration: none
+      .icon-facebook
+        color: $facebook
+      .icon-twitter
+        color: $twitter
+      .icon-instagram
+        color: $instagram

@@ -1,0 +1,37 @@
+extends _innerLayout.pug
+
+block content            
+  section.contact-page
+    .container
+      .row
+        .col-md-6
+          form
+            div
+              label(for="name") Name
+              input#name(type="text")
+            div
+              label(for="email") Email
+              input#email(type="email")
+            div
+              label(for="phone") Phone
+              input#phone(type="text")
+            div
+              label(for="message") Message
+              textarea#message
+            div
+              input.send(type="submit" value="Send")
+        .col-md-6
+          .contact-info.text-center.text-md-right
+            h3 704.989.7863
+          .social-media
+            h4.text-center Find Me on Social Media
+            .block-grid-3.text-center
+              .block-item
+                a(target="_blank" href="https://www.facebook.com/Pure-Arts-Photography-1033720276758371/")
+                  i.icon.icon-facebook
+              .block-item
+                a(target="_blank" href="https://www.twitter.com/living4infinity")
+                  i.icon.icon-twitter
+              .block-item
+                a(target="_blank" href="https://www.instagram.com/pure_arts_/")
+                  i.icon.icon-instagram

@@ -1,0 +1,14 @@
+extends _innerLayout.pug
+
+block content
+  section.portfolio-page
+    .container
+      .row
+        .col-md-3
+          .search
+            input(type="text" ng-model="portfolioSearch")
+          
+        .col-md-9
+          ul.block-grid-sm-2.block-grid-lg-4.portfolio-list
+            li(ng-repeat="pic in portfolio | filter: portfolioSearch")
+              .img-wrapper(style="background-image: url('{{ imgBase }}{{ pic.image }}')")

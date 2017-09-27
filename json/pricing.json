@@ -1,0 +1,41 @@
+[
+  {
+    "plan": "basic",
+    "details": [
+      {
+        "price": 30,
+        "prints": 0,
+        "additionalPrints": 10,
+        "digital": 10,
+        "additionalDigital": 5,
+        "time": 1
+      }
+    ]
+  },
+  {
+    "plan": "advanced",
+    "details": [
+      {
+        "price": 30,
+        "prints": 0,
+        "additionalPrints": 10,
+        "digital": 10,
+        "additionalDigital": 5,
+        "time": 1
+      }
+    ]
+  },
+  {
+    "plan": "full",
+    "details": [
+      {
+        "price": 30,
+        "prints": 0,
+        "additionalPrints": 10,
+        "digital": 10,
+        "additionalDigital": 5,
+        "time": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+
+<header class="inner-header">
+  <div class="container">
+    <nav class="row">
+      <ul class="block-grid-4">
+        <li ng-repeat="page in siteNav"><a href="{{ page.link }}"> <span class="hide-sm show-lg-inline-block nav-icon"><i class="icon {{ page.icon }}"></i></span><span class="hide show-sm-inline-block">{{ page.page }}</span></a></li>
+      </ul><img class="header-logo" src="img/pap-logo-opaque.png"/>
+    </nav>
+  </div>
+</header>
+<section class="contact-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form>
+          <div>
+            <label for="name">Name</label>
+            <input id="name" type="text"/>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email"/>
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="text"/>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message"></textarea>
+          </div>
+          <div>
+            <input class="send" type="submit" value="Send"/>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="contact-info text-center text-md-right">
+          <h3>704.989.7863</h3>
+        </div>
+        <div class="social-media">
+          <h4 class="text-center">Find Me on Social Media</h4>
+          <div class="block-grid-3 text-center">
+            <div class="block-item"><a target="_blank" href="https://www.facebook.com/Pure-Arts-Photography-1033720276758371/"><i class="icon icon-facebook"></i></a></div>
+            <div class="block-item"><a target="_blank" href="https://www.twitter.com/living4infinity"><i class="icon icon-twitter"></i></a></div>
+            <div class="block-item"><a target="_blank" href="https://www.instagram.com/pure_arts_/"><i class="icon icon-instagram"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

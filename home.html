@@ -1,0 +1,93 @@
+
+<header class="hero">
+  <div class="container">
+    <div class="row hero-logo">
+      <div class="col-6 offset-3 col-sm-4 offset-sm-4"><img class="img-responsive img-center" src="img/pap-logo.png"/></div>
+    </div>
+    <div class="row hero-links">
+      <div class="col-md-10 offset-md-1"><a class="cta" href="#contact">Book a Shoot</a></div>
+    </div>
+  </div>
+  <nav>
+    <div class="container"> 
+      <ul class="block-grid-4 text-center">
+        <li ng-repeat="page in siteNav"><a href="{{ page.link }}"><span class="hide-sm show-lg-inline-block nav-icon"><i class="icon {{ page.icon }}"></i></span><span class="hide show-sm-inline-block">{{ page.page }}</span></a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section class="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Who is Alyssa Schmidt?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><a class="cta" href="#contact">Contact Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="showcase">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Showcase</h2>
+      </div>
+    </div>
+    <ul class="block-grid-2 block-grid-md-4 gallery">
+      <li ng-repeat="p in portfolio | filter: {'showcase': true} | limitTo: 8"><img class="img-responsive img-center" ng-src="{{ imgBase + p.image }}" alt="{{ p.title }}"/></li>
+    </ul>
+    <div class="row">
+      <div class="col-8 offset-2 col-md-6 offset-md-3"><a class="cta" href="#portfolio">View Full Portfolio</a></div>
+    </div>
+  </div>
+</section>
+<section class="testimonials">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>What Are People Saying?</h2>
+        <div ng-repeat="t in testimonials">
+          <div class="row">
+            <div class="col-sm-9 push-sm-3">
+              <p>{{ t.testimony }}</p>
+            </div>
+            <div class="col-sm-3 pull-sm-9">
+              <h6>{{ t.name }}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Contact Me</h2>
+        <form class="row" method="" action="" novalidate="novalidate">
+          <fieldset class="col-md-6">
+            <div class="form-part">
+              <label for="name">Name</label>
+              <input id="name" type="text"/>
+            </div>
+            <div class="form-part">
+              <label for="email">Email</label>
+              <input id="email" type="email"/>
+            </div>
+            <div class="form-part">
+              <label for="phone">Phone</label>
+              <input id="phone" type="text"/>
+            </div>
+          </fieldset>
+          <fieldset class="col-md-6">
+            <div class="form-part form-message">
+              <label for="message">Message</label>
+              <textarea id="message"></textarea>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

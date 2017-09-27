@@ -1,0 +1,24 @@
+extends _innerLayout.pug
+
+block content
+  section.pricing-page
+    .container
+      .row
+        .col-md-4.text-center(ng-repeat="p in pricing")
+          .pricing-plans(ng-repeat="d in p.details")
+            h4 {{ p.plan  | uppercase}}
+            div
+              h6 Prints
+              p.text-push-up {{ d.prints}}
+            div
+              h6 Additional Prints
+              p.text-push-up {{ d.additionalPrints | currency }} #[small per print]
+            div
+              h6 Digital Copies
+              p.text-push-up {{ d.digital }}
+            div
+              h6 Additional Digitial
+              p.text-push-up {{ d.additionalDigital | currency }} #[small per image]
+            div
+              h6 Shooting Hours
+              p.text-push-up {{ d.time }}

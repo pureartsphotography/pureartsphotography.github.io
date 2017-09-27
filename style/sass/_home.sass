@@ -1,0 +1,78 @@
+section.about
+  background:
+    image: linear-gradient(rgba($black, 0.9), rgba($black, 0.9)), url("../img/alyssa.jpeg")
+    size: cover
+  color: $lightpurple
+  position: relative
+  +break-md
+    background:
+      image: linear-gradient(90deg, $black 50%, rgba($black, 0.5), rgba($lightpurple, 0.2))
+    &::before
+      background:
+        image: url("../img/alyssa.jpeg")
+        origin: border-box
+        position: top right
+        repeat: no-repeat
+        size: cover
+      bottom: 0
+      content: ''
+      display: block
+      left: 50%
+      position: absolute
+      right: 0
+      top: 0
+      z-index: -1
+
+
+section.showcase
+  background:
+    image: linear-gradient(rgba($purple, 0.5), rgba($purple, 0.5)), url("../img/lowpoly.jpg")
+    size: cover
+  padding-bottom: $padding-height + $angle-height
+  position: relative
+
+section.testimonials
+  background-color: $purple
+  color: $lightpurple
+  position: relative
+  &::before, &::after
+    content: ''
+    display: block
+    position: absolute
+    right: 0
+    z-index: 1
+  &::before
+    border-bottom: $angle-height solid $purple
+    border-right: 100vw solid transparent
+    bottom: 100%
+  &::after
+    border-top: $angle-height solid $purple
+    border-left: 100vw solid transparent
+    top: 100%
+
+section.contact
+  background-color: $lightpurple
+  color: $brown
+  padding-top: $angle-height + $padding-height
+  form
+    fieldset
+      border: none
+    div
+      padding: 0.5rem 0
+    input, textarea
+      border: none
+      border-radius: $border-radius / 2
+      box-sizing: border-box
+      +font(2)
+      outline: none
+      padding: 0.5rem 1rem
+      width: 70%
+    textarea
+      height: (1.875 * 3) + 2rem + 3rem
+      resize: none
+    label
+      display: inline-block
+      position: relative
+      width: 25%
+    .form-message label
+      top: -9rem

@@ -1,0 +1,22 @@
+[
+  {
+    "page": "Home",
+    "link": "#home",
+    "icon": "icon-home"
+  },
+  {
+    "page": "Portfolio",
+    "link": "#portfolio",
+    "icon": "icon-portfolio"
+  },
+  {
+    "page": "Pricing",
+    "link": "#pricing",
+    "icon": "icon-pricing"
+  },
+  {
+    "page": "Contact",
+    "link": "#contact",
+    "icon": "icon-contact"
+  }
+]

@@ -1,0 +1,28 @@
+section.portfolio-page
+  background-color: $white
+  ul.portfolio-list
+    li
+      padding-bottom: $gutter
+      padding-top: $gutter
+
+  .img-wrapper
+    background:
+      position: center top
+      repeat: no-repeat
+      size: cover
+    height: 12rem
+    overflow: hidden
+    transition: transform 0.3s ease
+    width: 100%
+    &:hover
+      transform: scale(1.1)
+      transform-origin: center
+
+  .search
+    margin-top: $gutter
+    input
+      display: block
+      margin: 0 auto
+      width: ((100% / 12) * 6)
+      +break-md
+        width: 100%

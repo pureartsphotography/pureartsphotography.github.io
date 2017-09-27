@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pure Arts Photography</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Raleway">
+    <link rel="stylesheet" href="style/main.css">
+  </head>
+  <body class="responsive" ng-app="app" ng-controller="navCtrl">
+    <div class="content-view" ng-view></div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-8 offset-2 col-sm-2 push-sm-10 offset-sm-0"><img class="img-responsive img-center" src="img/pap-logo-brown.png" alt="Pure Arts Photography"></div>
+          <div class="col-sm-4 pull-sm-2 text-center text-sm-left">
+            <nav>
+              <ul>
+                <li ng-repeat="page in siteNav"><a href="{{ page.link }}">{{ page.page }}</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-sm-4 pull-sm-2 text-center">
+            <p>&copy; Pure Arts Photography, 2017</p>
+            <div class="footer-social-media">
+              <ul class="block-grid-3 text-center">
+                <li><a target="_blank" href="https://www.facebook.com/Pure-Arts-Photography-1033720276758371/"><i class="icon icon-facebook"></i></a></li>
+                <li><a target="_blank" href="https://www.twitter.com/living4infinity"><i class="icon icon-twitter"></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/pure_arts_/"><i class="icon icon-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script/angular.min.js"></script>
+    <script src="script/angular-route.min.js"></script>
+    <script src="script/app.js"></script>
+  </body>
+</html>

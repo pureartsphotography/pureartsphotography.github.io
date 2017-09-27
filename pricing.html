@@ -1,0 +1,41 @@
+
+<header class="inner-header">
+  <div class="container">
+    <nav class="row">
+      <ul class="block-grid-4">
+        <li ng-repeat="page in siteNav"><a href="{{ page.link }}"> <span class="hide-sm show-lg-inline-block nav-icon"><i class="icon {{ page.icon }}"></i></span><span class="hide show-sm-inline-block">{{ page.page }}</span></a></li>
+      </ul><img class="header-logo" src="img/pap-logo-opaque.png"/>
+    </nav>
+  </div>
+</header>
+<section class="pricing-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center" ng-repeat="p in pricing">
+        <div class="pricing-plans" ng-repeat="d in p.details">
+          <h4>{{ p.plan  | uppercase}}</h4>
+          <div>
+            <h6>Prints</h6>
+            <p class="text-push-up">{{ d.prints}}</p>
+          </div>
+          <div>
+            <h6>Additional Prints</h6>
+            <p class="text-push-up">{{ d.additionalPrints | currency }} <small>per print</small></p>
+          </div>
+          <div>
+            <h6>Digital Copies</h6>
+            <p class="text-push-up">{{ d.digital }}</p>
+          </div>
+          <div>
+            <h6>Additional Digitial</h6>
+            <p class="text-push-up">{{ d.additionalDigital | currency }} <small>per image</small></p>
+          </div>
+          <div>
+            <h6>Shooting Hours</h6>
+            <p class="text-push-up">{{ d.time }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

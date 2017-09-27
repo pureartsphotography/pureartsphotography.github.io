@@ -1,46 +1,32 @@
 footer
-  background: $black
+  background-color: $black
   color: $white
-  text-align: center
-  +bs-sm
-    text-align: left
-    .footer-middle
-      text-align: center
+  padding: 3rem 0
 
-  .footer-section + .footer-section
-    padding-top: 2em
-    +bs-sm
-      padding-top: 0
+  .container
+    .row
+      +break-sm
+        display: flex
+        flex: 1
+        flex-flow: row nowrap
+        align-items: center
 
-  .footer-navigation
-    display: flex
-    flex-direction: row
-    align-items: center
-    justify-content: space-around
-    +bs-sm
-      display: block
+  nav
+    ul
+      list-style-type: none
+      padding: 0
+      li
+        margin: 2rem 0
+        padding: 0
 
-  .social-icons
-    padding-top: 2em
-    width: 50%
-    margin: 0 auto
-
-  .footer-logo
-    margin: 0 auto
-
-  a,
-  a:visited,
-  a:active,
-  a:focus,
-  a i.fa
+  a
     color: $white
     text-decoration: none
-    transition: color .3s ease-in-out
-
-  a:hover,
-  a:hover i.fa
-    color: $lightbrown
-    text-decoration: none
-
-  .footer-middle
-    text-align: center
+    .icon
+      +font(6)
+    .icon-facebook
+      color: $facebook
+    .icon-twitter
+      color: $twitter
+    .icon-instagram
+      color: $instagram

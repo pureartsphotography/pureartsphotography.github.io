@@ -1,0 +1,55 @@
+header.hero
+  background:
+    image: url('../img/tracks.jpg')
+    position: center center
+    repeat: no-repeat
+    size: cover
+  height: 100vh
+  position: relative
+  nav
+    background-color: rgba($black, 0.9)
+    bottom: 0
+    padding: 2rem 0
+    position: absolute
+    text-transform: uppercase
+    width: 100%
+
+
+
+header.inner-header
+  background-color: $lightpurple
+  overflow: visible
+  padding: 2rem 0
+  position: fixed
+  width: 100%
+  z-index: 1
+
+header
+  nav
+    ul
+      margin-bottom: 0
+      margin-top: 0
+    li
+      text-align: center
+      height: $scale * 2
+      a
+        color: $brown
+        cursor: pointer
+        +font(2)
+        font-family: "Montserrat"
+        text:
+          decoration: none
+          transform: uppercase
+
+        img
+          max-height: #{$scale * 2}rem
+    .header-logo
+      bottom: -4rem
+      height: 8rem
+      position: absolute
+      left: calc(50% - 4rem)
+    .nav-icon
+      +font(8)
+      +break-lg
+        +font(2)
+      margin-right: 0.5rem

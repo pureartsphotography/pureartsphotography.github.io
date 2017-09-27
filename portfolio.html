@@ -1,0 +1,28 @@
+
+<header class="inner-header">
+  <div class="container">
+    <nav class="row">
+      <ul class="block-grid-4">
+        <li ng-repeat="page in siteNav"><a href="{{ page.link }}"> <span class="hide-sm show-lg-inline-block nav-icon"><i class="icon {{ page.icon }}"></i></span><span class="hide show-sm-inline-block">{{ page.page }}</span></a></li>
+      </ul><img class="header-logo" src="img/pap-logo-opaque.png"/>
+    </nav>
+  </div>
+</header>
+<section class="portfolio-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="search">
+          <input type="text" ng-model="portfolioSearch"/>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <ul class="block-grid-sm-2 block-grid-lg-4 portfolio-list">
+          <li ng-repeat="pic in portfolio | filter: portfolioSearch">
+            <div class="img-wrapper" style="background-image: url('{{ imgBase }}{{ pic.image }}');"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

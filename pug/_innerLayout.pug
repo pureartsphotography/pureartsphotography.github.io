@@ -1,0 +1,12 @@
+header.inner-header
+  .container
+    nav.row
+      ul.block-grid-4
+        li(ng-repeat="page in siteNav")
+          a(href="{{ page.link }}") 
+            span.hide-sm.show-lg-inline-block.nav-icon
+              i(class="icon {{ page.icon }}")
+            span.hide.show-sm-inline-block {{ page.page }}
+      img.header-logo(src="img/pap-logo-opaque.png")
+        
+block content

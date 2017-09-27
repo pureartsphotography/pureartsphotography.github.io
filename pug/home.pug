@@ -1,0 +1,71 @@
+header.hero
+  .container
+    .row.hero-logo
+      .col-6.offset-3.col-sm-4.offset-sm-4
+        img.img-responsive.img-center(src="img/pap-logo.png")
+    .row.hero-links
+      .col-md-10.offset-md-1
+        a.cta(href="#contact") Book a Shoot
+  nav
+    .container  
+      ul.block-grid-4.text-center
+        li(ng-repeat="page in siteNav")
+          a(href="{{ page.link }}")
+            span.hide-sm.show-lg-inline-block.nav-icon
+              i(class="icon {{ page.icon }}")
+            span.hide.show-sm-inline-block {{ page.page }}
+        
+section.about
+  .container
+    .row
+      .col-sm-6
+        h2 Who is Alyssa Schmidt?
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        
+        a.cta(href="#contact") Contact Me
+      
+  
+section.showcase
+  .container
+    .row
+      .col-12
+        h2 Showcase
+    ul.block-grid-2.block-grid-md-4.gallery
+      li(ng-repeat="p in portfolio | filter: {'showcase': true} | limitTo: 8")
+        img.img-responsive.img-center(ng-src="{{ imgBase + p.image }}" alt="{{ p.title }}")
+    .row
+      .col-8.offset-2.col-md-6.offset-md-3
+        a.cta(href="#portfolio") View Full Portfolio
+        
+section.testimonials
+  .container
+    .row
+      .col-12
+        h2 What Are People Saying?
+        div(ng-repeat="t in testimonials")
+          .row
+            .col-sm-9.push-sm-3
+              p {{ t.testimony }}
+            .col-sm-3.pull-sm-9
+              h6 {{ t.name }}
+
+section.contact
+  .container
+    .row
+      .col-12
+        h2 Contact Me
+        form.row(method="", action="", novalidate)
+          fieldset.col-md-6
+            div.form-part
+              label(for="name") Name
+              input#name(type="text")
+            div.form-part
+              label(for="email") Email
+              input#email(type="email")
+            div.form-part
+              label(for="phone") Phone
+              input#phone(type="text")
+          fieldset.col-md-6
+            div.form-part.form-message
+              label(for="message") Message
+              textarea#message

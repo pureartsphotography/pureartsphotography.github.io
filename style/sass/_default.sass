@@ -1,0 +1,47 @@
+html, body
+  font-size: #{$base-font-size / $scale}px
+  +break-sm
+    font-size: #{$base-font-size}px
+  +break-lg
+    font-size: #{$base-font-size * $scale}px
+  height: 100%
+
+h1, h2, h3, h4, h5, h6, .cta
+  font-family: "Montserrat"
+
+p, label, input, textarea
+  font-family: "Raleway"
+
+h2
+  text-transform: uppercase
+
+header, section, footer
+  box-sizing: border-box
+  padding: $padding-height 0
+
+.portfolio-page, .pricing-page, .contact-page
+  padding-top: ($scale * 2 + 10rem)
+
+ul.gallery
+  li
+    padding-bottom: $gutter
+    padding-top: $gutter
+
+.cta
+  background-color: rgba($black, 0.3)
+  border: 3px solid $white
+  border-radius: $border-radius
+  color: $white
+  display: block
+  +font(2)
+  margin-top: 5rem
+  padding: 1.5rem 0
+  position: relative
+  text-align: center
+  text-decoration: none
+  transition: 0.4s ease all
+  &:hover
+    background-color: $white
+    border-color: $black
+    color: $black
+    transition: 0.4s ease all
